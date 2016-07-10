@@ -1,0 +1,14 @@
+{
+  "name": "empinfo",
+  "version": "1.0.0",
+  "description": "This is employee information update application",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "sudhaambicasony15@gmail.com",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.14.0"
+  }
+}

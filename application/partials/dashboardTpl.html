@@ -1,0 +1,51 @@
+<div class="container">
+	<div class="row">
+		<div class="col-md-offset-6 col-md-6">
+			<div class="btn-group pull-right">
+				<button class="btn btn-primary" ui-sref="manage">Add</button>
+			</div>
+		</div>
+	</div>
+	<div class="row">
+		<div class="col-md-12">
+			<table class="table table-bordered table-striped table-hover table-condensed">
+				<thead>
+					<tr>
+						<th>Emp.Id</th>
+						<th>First Name</th>
+						<th>Last Name</th>
+						<th>Phone Number</th>
+						<th>Joining Date</th>
+						<th>Total Expirence</th>
+						<th>Email</th>
+						<th></th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td colspan="8">
+							<input type="text" class="form-control" name="search" placeholder="Search..." ng-model="searchText" ng-disabled="allEmployees.length == 0">
+						</td>
+					</tr>
+					<tr ng-show="allEmployees.length == 0">
+						<td colspan="8">
+							<p class="col-md-offset-6 help-block">No Data Found</p>
+						</td>
+					</tr>
+					<tr ng-hide="allEmployees.length == 0" ng-repeat="emp in allEmployees | filter:searchText track by $index">
+						<td>{{emp.id}}</td>
+						<td><a ui-sref="manage({id:emp.id})">{{emp.fName}}</a></td>
+						<td>{{emp.lName}}</td>
+						<td>{{emp.pNumber}}</td>
+						<td>{{emp.dateOfJoin | date:'short'}}</td>
+						<td>{{emp.totalExp}}</td>
+						<td>{{emp.email}}</td>
+						<th>
+							<button class="btn btn-danger" ng-click="onDeleteEmployee(emp)">Delete</button>
+						</th>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+	</div>
+</div>

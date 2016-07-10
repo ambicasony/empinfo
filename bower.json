@@ -1,0 +1,28 @@
+{
+  "name": "empinfo",
+  "description": "This is employee information update application",
+  "main": "app.js",
+  "authors": [
+    "sudhaambicasony15@gmail.com"
+  ],
+  "license": "ISC",
+  "moduleType": [],
+  "homepage": "index.html",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular": "^1.5.7",
+    "bootstrap": "^3.3.6",
+    "angular-ui-router": "^0.3.1",
+    "AngularJS-Toaster": "angularjs-toaster#^2.0.0",
+    "font-awesome": "^4.6.3",
+    "angular-bootstrap": "^1.3.3",
+    "angular-resource": "^1.5.7",
+    "underscore": "^1.8.3"
+  }
+}

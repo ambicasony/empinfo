@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html ng-app="empInfoWebUi">
+	<head>
+		<meta charset="UTF-8"> 
+		<title>Employee Information</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link rel="stylesheet" type="text/css" href="./bower_components/bootstrap/dist/css/bootstrap.css">
+		<link rel="stylesheet" type="text/css" href="./bower_components/font-awesome/css/font-awesome.css" />
+		<link rel="stylesheet" type="text/css" href="./bower_components/AngularJS-Toaster/toaster.css" />
+		<style type="text/css">
+			.show-warn{
+			    border: 1px solid #f0ad4e;
+			}
+			.show-danger{
+			    border: 1px solid #d9534f;
+			}
+			.show-success{
+			    border: 1px solid #5cb85c;
+			}
+		</style>
+	</head>
+	<body>
+		<toaster-container></toaster-container>
+		<header>
+			<div ng-include="'./application/common/header-tpl.html'"></div>
+		</header>
+		<section style="margin-top:60px;">
+			<div ui-view></div>
+		</section>
+		<script type="text/javascript" src="./bower_components/jquery/dist/jquery.js" ></script>
+		<script type="text/javascript" src="./bower_components/bootstrap/dist/js/bootstrap.js" ></script>
+		<script type="text/javascript" src="./bower_components/underscore/underscore.js" ></script>
+		<script type="text/javascript" src="./bower_components/angular/angular.js" ></script>
+		<script type="text/javascript" src="./bower_components/angular-ui-router/release/angular-ui-router.js" ></script>
+		<script type="text/javascript" src="./bower_components/angular-resource/angular-resource.js" ></script>
+		<script type="text/javascript" src="./bower_components/angular-bootstrap/ui-bootstrap-tpls.js" ></script>
+		<script type="text/javascript" src="./bower_components/angular-animate/angular-animate.js" ></script>
+		<script type="text/javascript" src="./bower_components/AngularJS-Toaster/toaster.js" ></script>
+
+		<script type="text/javascript" src="app.js" ></script>
+		<script type="text/javascript" src="./application/controller/dashboardCtrl.js" ></script>
+		<script type="text/javascript" src="./application/controller/manageEmpCtrl.js" ></script>
+		<script type="text/javascript" src="./application/service/empService.js" ></script>
+		<script type="text/javascript" src="./application/components/emailExistDir.js" ></script>
+
+	</body>
+</html>
